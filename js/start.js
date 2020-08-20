@@ -11,6 +11,7 @@ window.addEventListener('touchstart', touchFn, false)
 // DOM
 var container = document.getElementById('container')
     canvas = document.getElementById('canvas')
+    startBtn = document.getElementById('startBtn')
     ctx = canvas.getContext('2d')
 canvas.width = 343
 canvas.height = 480
