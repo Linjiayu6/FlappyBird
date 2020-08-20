@@ -15,10 +15,11 @@ var container = document.getElementById('container')
 
 var bird = new Bird(ctx)
 
-// startBtn.onclick = function () {
-//     container.style.display = "none";
-//     canvas.style.visibility = 'visible';
-// }
+startBtn.onclick = function () {
+    container.style.display = "none";
+    canvas.style.visibility = 'visible';
+    START.init()
+}
 
 var START = {
     limit: 2,
@@ -68,5 +69,3 @@ var START = {
         window.requestAnimationFrame(START.moving)
     }
 }
-
-START.init()

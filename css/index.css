@@ -13,13 +13,12 @@ html,body {
 	top: 100px;
 	left: 0;
 	right: 0;
-    /* visibility: hidden; */
+    visibility: hidden;
 	margin: 0 auto;
 	overflow: hidden;
 }
   
 #container {/*游戏背景*/
-	/* display: none; */
     width: 343px;
     height: 480px; 
 	margin: 0 auto;
