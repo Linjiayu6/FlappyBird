@@ -12,6 +12,8 @@ window.addEventListener('touchstart', touchFn, false)
 var container = document.getElementById('container')
     canvas = document.getElementById('canvas')
     ctx = canvas.getContext('2d')
+canvas.width = 343
+canvas.height = 480
 
 var bird = new Bird(ctx)
 
