@@ -1,9 +1,9 @@
 
-class Bird {
-    static normal_bird = [imgs.bird0, imgs.bird1] // normal
-    static up_bird = [imgs.up_bird0,imgs.up_bird1] // up
-    static down_bird = [imgs.down_bird0,imgs.down_bird1] // down
+var normal_bird = [imgs.bird0, imgs.bird1] // normal
+var up_bird = [imgs.up_bird0,imgs.up_bird1] // up
+var down_bird = [imgs.down_bird0,imgs.down_bird1] // down
 
+class Bird {
     constructor () {
         this.i = 0
 
@@ -31,18 +31,18 @@ class Bird {
 
         // if bottom
         if (this.posY >= 420) {
-            this._draw(Bird.normal_bird[this.i])
+            this._draw(normal_bird[this.i])
             this.setDeath()
             return
         }
 
         // change different images
         if (this.speed < 0) {
-            this._draw(Bird.up_bird[this.i])
+            this._draw(up_bird[this.i])
         } else if (this.speed > 0) {
-            this._draw(Bird.down_bird[this.i])
+            this._draw(down_bird[this.i])
         } else {
-            this._draw(Bird.normal_bird[this.i])
+            this._draw(normal_bird[this.i])
         }
 
         // config index of bird image

@@ -3,14 +3,13 @@ var container = document.getElementById('container')
     canvas = document.getElementById('canvas')
     startBtn = document.getElementById('startBtn')
     ctx = canvas.getContext('2d')
-canvas.width = 343
-canvas.height = 480
 
 // PREVENT page scrolling
 document.body.addEventListener('touchmove', function (event) {
     event.preventDefault();
 }, false)
 
+var bird = new Bird(ctx)
 // WHEN click / touchstart, bird fly up
 function touchFn () { bird.speed = -2 }
 window.addEventListener('click', touchFn, false)
@@ -21,7 +20,6 @@ startBtn.addEventListener('click', function () {
     START.init()
 })
 
-var bird = new Bird(ctx)
 var START = {
     limit: 2,
     queue: [],
