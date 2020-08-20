@@ -1,3 +1,11 @@
+// DOM
+var container = document.getElementById('container')
+    canvas = document.getElementById('canvas')
+    startBtn = document.getElementById('startBtn')
+    ctx = canvas.getContext('2d')
+canvas.width = 343
+canvas.height = 480
+
 // PREVENT page scrolling
 document.body.addEventListener('touchmove', function (event) {
     event.preventDefault();
@@ -7,23 +15,13 @@ document.body.addEventListener('touchmove', function (event) {
 function touchFn () { bird.speed = -2 }
 window.addEventListener('click', touchFn, false)
 window.addEventListener('touchstart', touchFn, false)
-
-// DOM
-var container = document.getElementById('container')
-    canvas = document.getElementById('canvas')
-    startBtn = document.getElementById('startBtn')
-    ctx = canvas.getContext('2d')
-canvas.width = 343
-canvas.height = 480
-
-var bird = new Bird(ctx)
-
-startBtn.onclick = function () {
+startBtn.addEventListener('click', function () {
     container.style.display = "none";
     canvas.style.visibility = 'visible';
     START.init()
-}
+})
 
+var bird = new Bird(ctx)
 var START = {
     limit: 2,
     queue: [],
