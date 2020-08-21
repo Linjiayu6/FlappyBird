@@ -35,12 +35,12 @@ imgs = {
       //添加定时器，判断图片是否加载完成
       var timer = setInterval(function() {
         if (that.bg.complete&&that.grass.complete
-          &&that.title.complete&&that.startBtn.complete
-          &&that.bird0.complete&&that.bird1.complete
-          &&that.up_bird0.complete&&that.up_bird1.complete
-          &&that.down_bird0.complete&&that.down_bird1.complete
-          &&that.up_pipe.complete&&that.up_mod.complete
-          &&that.down_mod.complete&&that.down_pipe.complete) {
+          && that.title.complete && that.startBtn.complete
+          && that.bird0.complete && that.bird1.complete
+          && that.up_bird0.complete && that.up_bird1.complete
+          && that.down_bird0.complete && that.down_bird1.complete
+          && that.up_pipe.complete && that.up_mod.complete
+          && that.down_mod.complete && that.down_pipe.complete) {
           //删除定时器
           clearInterval(timer);
           //图片全部加载完成后，运行此函数

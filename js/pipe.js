@@ -6,10 +6,16 @@ class Pipe {
         this.down = imgs.down_pipe
         this.down_mod = imgs.down_mod
 
+        this.done = false
+
         this.X = 300
         // distance between up and bottom is 50px
         this.up_Y = Math.floor(Math.random() * 50)
         this.down_Y = (50 - this.up_Y) * 3
+
+        // position
+        this.pos_up_Y = this.up_Y * 3 + this.up.height
+        this.pos_down_Y = 362 - this.down_Y
     }
 
     draw () {
@@ -29,5 +35,9 @@ class Pipe {
     move () {
         this.X -= 3
         this.draw()
+    }
+
+    setDone () {
+        this.done = true
     }
 }

@@ -4,7 +4,7 @@ var up_bird = [imgs.up_bird0,imgs.up_bird1] // up
 var down_bird = [imgs.down_bird0,imgs.down_bird1] // down
 
 class Bird {
-    constructor () {
+    constructor (gameoverCb) {
         this.i = 0
 
         this.posX = 100
@@ -13,6 +13,8 @@ class Bird {
         // When touch screen, speed change
         this.speed = 0
         this.alive = true
+
+        this.gameoverCb = gameoverCb
     }
 
     _draw (img) {
@@ -32,7 +34,7 @@ class Bird {
         // if bottom
         if (this.posY >= 420) {
             this._draw(normal_bird[this.i])
-            this.setDeath()
+            this.setDeath('fly to the bottom')
             return
         }
 
@@ -56,7 +58,8 @@ class Bird {
         }
     }
 
-    setDeath () {
+    setDeath (reason) {
         this.alive = false
+        this.gameoverCb(reason)
     }
 }

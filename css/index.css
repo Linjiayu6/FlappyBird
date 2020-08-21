@@ -2,10 +2,22 @@
     margin: 0;
     padding: 0;
   }
-html,body {
+
+html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+
+.desc {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+	overflow: hidden;
 }
 
 #canvas {
@@ -123,27 +135,4 @@ html,body {
 @-webkit-keyframes grassMove2 {
 	0% { left: -50%; }
 	100% { left: 0px; }
-}
-
-#score {
-	position:absolute;
-	left: 130px;
-	top:50px;
-	z-index: 1;
-}
-
-#score div {
-	height: 39px;
-	width: 28px;
-	float: left;
-	background-image: url(../img/0.jpg);
-	display: none;
-}
-
-#gameOver{
-	position: absolute;
-	top: 100px;
-	text-align: center;
-	display: none;
-	z-index: 1;
 }
