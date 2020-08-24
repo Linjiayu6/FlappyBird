@@ -1,6 +1,21 @@
-// 图片集合
-imgs = {
-    //创建图片
+// var prefix = '../img/'
+import bg from '../img/bg.jpg'
+import bird0 from '../img/bird0.png'
+import bird1 from '../img/bird1.png'
+import up_bird0 from '../img/up_bird0.png'
+import up_bird1 from '../img/up_bird1.png'
+import down_bird0 from '../img/down_bird0.png'
+import down_bird1 from '../img/down_bird1.png'
+import start from '../img/start.jpg'
+
+import up_pipe from '../img/up_pipe.png'
+import up_mod from '../img/up_mod.png'
+import down_pipe from '../img/down_pipe.png'
+import down_mod from '../img/down_mod.png'
+
+// Images
+window.imgs = {
+    // Create
     bg: new Image(),
     grass: new Image(),
     title: new Image(),
@@ -17,24 +32,22 @@ imgs = {
     down_mod: new Image(),
     //加载图片
     loadImg: function (fn) {
-      this.bg.src = './img/bg.jpg';
-      this.grass.src = './img/banner.jpg';
-      this.title.src = './img/head.jpg';
-      this.bird0.src = './img/bird0.png';
-      this.bird1.src = './img/bird1.png';
-      this.up_bird0.src = './img/up_bird0.png';
-      this.up_bird1.src = './img/up_bird1.png';
-      this.down_bird0.src = './img/down_bird0.png';
-      this.down_bird1.src = './img/down_bird1.png';
-      this.startBtn.src = './img/start.jpg';
-      this.up_pipe.src = './img/up_pipe.png';
-      this.up_mod.src = './img/up_mod.png';
-      this.down_pipe.src = './img/down_pipe.png';
-      this.down_mod.src = './img/down_mod.png';
+      this.bg.src = bg;
+      this.bird0.src = bird0;
+      this.bird1.src = bird1;
+      this.up_bird0.src = up_bird0;
+      this.up_bird1.src = up_bird1;
+      this.down_bird0.src = down_bird0;
+      this.down_bird1.src = down_bird1;
+      this.startBtn.src = start;
+      this.up_pipe.src = up_pipe;
+      this.up_mod.src = up_mod;
+      this.down_pipe.src = down_pipe;
+      this.down_mod.src = down_mod;
       var that = this;
       //添加定时器，判断图片是否加载完成
       var timer = setInterval(function() {
-        if (that.bg.complete&&that.grass.complete
+        if (that.bg.complete && that.grass.complete
           && that.title.complete && that.startBtn.complete
           && that.bird0.complete && that.bird1.complete
           && that.up_bird0.complete && that.up_bird1.complete

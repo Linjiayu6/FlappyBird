@@ -1,6 +1,6 @@
 
 class Pipe {
-    constructor () {
+    constructor (ctx) {
         this.up = imgs.up_pipe
         this.up_mod = imgs.up_mod
         this.down = imgs.down_pipe
@@ -16,19 +16,21 @@ class Pipe {
         // position
         this.pos_up_Y = this.up_Y * 3 + this.up.height
         this.pos_down_Y = 362 - this.down_Y
+
+        this.ctx = ctx
     }
 
     draw () {
         // draw pipe head
-        ctx.drawImage(this.up, this.X, this.up_Y * 3)
-        ctx.drawImage(this.down, this.X, 362 - this.down_Y)
+        this.ctx.drawImage(this.up, this.X, this.up_Y * 3)
+        this.ctx.drawImage(this.down, this.X, 362 - this.down_Y)
 
         // draw pipe body
         for (var i = 0; i < this.up_Y; i++) { 
-            ctx.drawImage(this.up_mod, this.X, i * 3)
+            this.ctx.drawImage(this.up_mod, this.X, i * 3)
         }
         for (var j = 0; j < this.down_Y; j++) { 
-            ctx.drawImage(this.down_mod, this.X, 420 - this.down_Y + this.down_mod.height + j)
+            this.ctx.drawImage(this.down_mod, this.X, 420 - this.down_Y + this.down_mod.height + j)
         }
     }
 
@@ -41,3 +43,5 @@ class Pipe {
         this.done = true
     }
 }
+
+export default Pipe

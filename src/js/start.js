@@ -1,11 +1,14 @@
+import Bird from './bird'
+import Pipe from './pipe'
+
 // DOM
 var container = document.getElementById('container')
-    canvas = document.getElementById('canvas')
-    startBtn = document.getElementById('startBtn')
-    scoreDom = document.getElementById('score')
-    ctx = canvas.getContext('2d')
+var canvas = document.getElementById('canvas')
+var startBtn = document.getElementById('startBtn')
+var scoreDom = document.getElementById('score')
+var ctx = canvas.getContext('2d')
 
-var bird = new Bird(gameOver)
+var bird = new Bird(gameOver, ctx)
 
 // PREVENT page scrolling
 document.body.addEventListener('touchmove', function (event) {
@@ -60,7 +63,7 @@ var START = {
         START.pipe_width = 0
         START.score = 0
 
-        bird = new Bird(gameOver)
+        bird = new Bird(gameOver, ctx)
         ctx.clearRect(0, 0, 343, 480) // clear canvas
         scoreDom.innerText = 0
         container.style.display = "block"
@@ -72,7 +75,7 @@ var START = {
         if (this.flag < this.num) {
             this.flag ++
         } else {
-            var ins = new Pipe()
+            var ins = new Pipe(ctx)
             if (this.queue.length < this.limit) {
                 this.queue.push(ins)
             } else {
@@ -91,8 +94,8 @@ var START = {
     isHit: function (pipe) {
         // bird: X + body width
         var b_X = bird.posX
-            b_Y = bird.posY
-            p_X = pipe.X
+        var b_Y = bird.posY
+        var p_X = pipe.X
 
         // Evaluate X
         if (b_X + this.bird_width > p_X && b_X < p_X + this.pipe_width) {

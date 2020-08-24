@@ -1,10 +1,9 @@
-
 var normal_bird = [imgs.bird0, imgs.bird1] // normal
 var up_bird = [imgs.up_bird0,imgs.up_bird1] // up
 var down_bird = [imgs.down_bird0,imgs.down_bird1] // down
 
 class Bird {
-    constructor (gameoverCb) {
+    constructor (gameoverCb, ctx) {
         this.i = 0
 
         this.posX = 100
@@ -14,11 +13,12 @@ class Bird {
         this.speed = 0
         this.alive = true
 
+        this.ctx = ctx
         this.gameoverCb = gameoverCb
     }
 
     _draw (img) {
-        ctx.drawImage(img, this.posX, this.posY)
+        this.ctx.drawImage(img, this.posX, this.posY)
     }
 
     fly () {
@@ -63,3 +63,5 @@ class Bird {
         this.gameoverCb(reason)
     }
 }
+
+export default Bird
