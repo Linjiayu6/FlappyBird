@@ -44,14 +44,12 @@ var START = {
     queue: [],
     flag: 0,
     num: Math.floor(70 + Math.random() * 20),
-    bird_width: 0,
-    pipe_width: 0,
+    bird_width: 40,
+    pipe_width: 62,
     score: 0,
 
     init: function () {
         imgs.loadImg(START.draw)
-        this.bird_width = imgs.bird0.width
-        this.pipe_width = imgs.down_pipe.width
     },
 
     reset: function () {
@@ -59,8 +57,6 @@ var START = {
         START.queue = []
         START.flag = 0
         START.num = Math.floor(70 + Math.random() * 20)
-        START.bird_width = 0
-        START.pipe_width = 0
         START.score = 0
 
         bird = new Bird(gameOver, ctx)
@@ -100,7 +96,6 @@ var START = {
         // Evaluate X
         if (b_X + this.bird_width > p_X && b_X < p_X + this.pipe_width) {
             // Evaluate Y
-            // console.log(b_Y, pipe.pos_up_Y)
             if (b_Y < pipe.pos_up_Y) {
                 bird.setDeath('HIT UP_PIPE ')
             } else if (b_Y + 30 > pipe.pos_down_Y) {
