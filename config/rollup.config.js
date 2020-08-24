@@ -3,6 +3,7 @@ import image from '@rollup/plugin-image'
 import babel from 'rollup-plugin-babel'
 import commonjs from "rollup-plugin-commonjs"
 import url from '@rollup/plugin-url'
+import { terser } from 'rollup-plugin-terser' // uglify
 import { version } from '../package.json'
 
 const name = 'flappy bird'
@@ -29,6 +30,7 @@ export default {
             extensions: /\.(png|jpg|jpeg|gif|svg)$/,
             limit: 10000
         }),
-        url()
+        url(),
+        terser()
     ]
   }
