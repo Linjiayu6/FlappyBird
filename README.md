@@ -8,4 +8,3 @@ If you like, give me a Star✨
 
 - npm run dev
 - npm run build
-- TODO Optimization: ❌ base64 string to bundle.js
