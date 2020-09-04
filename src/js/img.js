@@ -1,17 +1,31 @@
 // var prefix = '../img/'
-import bg from '../img/bg.jpg'
-import bird0 from '../img/bird0.png'
-import bird1 from '../img/bird1.png'
-import up_bird0 from '../img/up_bird0.png'
-import up_bird1 from '../img/up_bird1.png'
-import down_bird0 from '../img/down_bird0.png'
-import down_bird1 from '../img/down_bird1.png'
-import start from '../img/start.jpg'
+// import bg from '../img/bg.jpg'
+// import bird0 from '../img/bird0.png'
+// import bird1 from '../img/bird1.png'
+// import up_bird0 from '../img/up_bird0.png'
+// import up_bird1 from '../img/up_bird1.png'
+// import down_bird0 from '../img/down_bird0.png'
+// import down_bird1 from '../img/down_bird1.png'
+// import up_pipe from '../img/up_pipe.png'
+// import up_mod from '../img/up_mod.png'
+// import down_pipe from '../img/down_pipe.png'
+// import down_mod from '../img/down_mod.png'
 
-import up_pipe from '../img/up_pipe.png'
-import up_mod from '../img/up_mod.png'
-import down_pipe from '../img/down_pipe.png'
-import down_mod from '../img/down_mod.png'
+const bg = 'https://i.niupic.com/images/2020/09/04/8CXx.jpg'
+const bird0 = 'https://i.niupic.com/images/2020/09/04/8CXA.png'
+const bird1 = 'https://i.niupic.com/images/2020/09/04/8CXC.png'
+const up_bird0 = 'https://i.niupic.com/images/2020/09/04/8CXO.png'
+const up_bird1 = 'https://i.niupic.com/images/2020/09/04/8CXP.png'
+
+const down_bird0 = 'https://i.niupic.com/images/2020/09/04/8CXQ.png'
+const down_bird1 = 'https://i.niupic.com/images/2020/09/04/8CXR.png'
+
+const up_pipe = 'https://i.niupic.com/images/2020/09/04/8CXS.png'
+const up_mod = 'https://i.niupic.com/images/2020/09/04/8CXT.png'
+
+const down_pipe = 'https://i.niupic.com/images/2020/09/04/8CXF.png'
+const down_mod = 'https://i.niupic.com/images/2020/09/04/8CXU.png'
+import start from '../img/start.jpg'
 
 // Images
 window.imgs = {

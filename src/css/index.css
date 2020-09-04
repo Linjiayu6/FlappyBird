@@ -34,7 +34,8 @@ html, body {
     width: 343px;
     height: 480px; 
 	margin: 0 auto;
-	background-image: url(../img/bg.jpg);
+	/* background-image: url(../img/bg.jpg); */
+	background-image: url('https://i.niupic.com/images/2020/09/04/8CXx.jpg');
 	position: relative;
 	top: 100px;
 	overflow: hidden;
@@ -43,7 +44,7 @@ html, body {
 #title {/*开始标题*/
     width: 236px;
     height: 77px;
-	background-image: url(../img/head.jpg);
+	background-image: url('https://i.niupic.com/images/2020/09/04/8CXH.jpg');
     position: absolute; 
     left: 53px; 
 	top: 100px;
@@ -65,7 +66,8 @@ html, body {
 }
 
 #headBird {/*开始标题中的小鸟*/
-	background-image: url(../img/bird0.png);
+	/* background-image: url(../img/bird0.png); */
+	background-image: url('https://i.niupic.com/images/2020/09/04/8CXA.png');
 	position: absolute; 
     right: 0; 
 	top: 20px;
@@ -76,13 +78,13 @@ html, body {
 }
 
 @keyframes headBirdMove {
-	from { background-image: url(../img/bird1.png); }
-	to { background-image: url(../img/bird0.png); }
+	from { background-image: url('https://i.niupic.com/images/2020/09/04/8CXC.png'); }
+	to { background-image: url('https://i.niupic.com/images/2020/09/04/8CXA.png'); }
 }
 
 @-webkit-keyframes headBirdMove {
-	from { background-image: url(../img/bird1.png); }
-	to { background-image: url(../img/bird0.png); }
+	from { background-image: url('https://i.niupic.com/images/2020/09/04/8CXC.png'); }
+	to { background-image: url('https://i.niupic.com/images/2020/09/04/8CXA.png'); }
 }
 
 #startBtn {/*开始按钮*/
@@ -90,7 +92,7 @@ html, body {
     height: 29px;
     padding: 0;
     margin: 0;
-	background-image: url(../img/start.jpg);
+	background-image: url('https://i.niupic.com/images/2020/09/04/8CXI.jpg');
     position: absolute;
     left: 129px;
     top: 300px;
@@ -98,8 +100,9 @@ html, body {
 
 #grassLand1 {/*草地1 为了动起来*/
     height: 14px;
-    width: 343px;
-	background-image: url(../img/banner.jpg);
+	width: 343px;
+	background-image: url('https://i.ibb.co/rt9tRcX/banner.jpg');
+	/* background-image: url(../img/banner.jpg); */
     position: absolute;
 	top: 423px;
 	animation: grassMove1 2s linear infinite;
@@ -108,8 +111,9 @@ html, body {
 
 #grassLand2 { /*草地2*/
     height: 14px;
-    width: 343px;
-	background-image: url(../img/banner.jpg);
+	width: 343px;
+	background-image: url('https://i.ibb.co/rt9tRcX/banner.jpg');
+	/* background-image: url(../img/banner.jpg); */
     position: absolute;
 	top: 423px;
 	right: 200px;
