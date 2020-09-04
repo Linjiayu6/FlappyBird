@@ -10,6 +10,7 @@
 // import up_mod from '../img/up_mod.png'
 // import down_pipe from '../img/down_pipe.png'
 // import down_mod from '../img/down_mod.png'
+// import start from '../img/start.jpg'
 
 const bg = 'https://i.niupic.com/images/2020/09/04/8CXx.jpg'
 const bird0 = 'https://i.niupic.com/images/2020/09/04/8CXA.png'
@@ -25,7 +26,8 @@ const up_mod = 'https://i.niupic.com/images/2020/09/04/8CXT.png'
 
 const down_pipe = 'https://i.niupic.com/images/2020/09/04/8CXF.png'
 const down_mod = 'https://i.niupic.com/images/2020/09/04/8CXU.png'
-import start from '../img/start.jpg'
+
+const start = 'https://i.niupic.com/images/2020/09/04/8CXI.jpg'
 
 // Images
 window.imgs = {
